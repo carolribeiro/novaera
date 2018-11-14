@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_admin', github: 'sferik/rails_admin'
-gem 'rails_admin_rollincode', '~>1.0'
+gem 'rails_admin_rollincode', git: 'https://github.com/carolribeiro/railsadmin.git'
 gem "devise"
 
 gem "font-awesome-rails"

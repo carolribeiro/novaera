@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
 
     def contato
     end
+    
+    def login
+    end
+    
 end

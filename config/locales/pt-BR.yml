@@ -9,6 +9,10 @@ pt-BR:
       client:
         one: Usuario
         other: Usuarios
+        one: Turma
+        other: Turmas
+        one: Aluno
+        other: Alunos
     attributes:
       client:
         name: "Nome"
