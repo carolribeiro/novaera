@@ -28,12 +28,7 @@
 					<li class="scroll <%= active_class(noticias_path) %>"><%= link_to "Notícias", noticias_path %></li></li>
 					<li class="scroll <%= active_class(galeria_path) %>"><%= link_to "Galeria", galeria_path %></li></li>
 					<li class="scroll <%= active_class(contato_path) %>"><%= link_to "Contato", contato_new_path %></li></li>
-					<li class="scroll"><a href="#blog">Login <b class="caret"></b></a>
-						<ul class="dropdown">
-							<li><a href="blog.html">Blog Page</a></li>
-							<li><a href="single-post.html">Single Post</a></li>
-						</ul>
-					</li>
+					<li class="scroll <%= active_class(new_usuario_session_path) %>"><%= link_to "Login", new_usuario_session_path %></li>
 				</ul>
 			</nav> 
 			<!-- /#main_navigation -->

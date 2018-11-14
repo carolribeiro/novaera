@@ -14,20 +14,24 @@ RailsAdmin.config do |config|
   config.model Usuario do
     label "Usuário" 
     navigation_icon 'fa fa-user'
-    # configure :password_digest do
-    #   label "Senha"
-    # end
+    configure :password do
+      label "Senha"
+    end
+    configure :password_confirmation do
+      label "Confirmação de senha"
+    end
     # list do
     #   exclude_fields :id, :password_digest, :created_at, :updated_at
     # end
     # show do
     #   exclude_fields :id, :password_digest
     # end  
-    # edit do
-    #   field  :nome
-    #   field  :email
-    #   field  :password_digest
-    # end 
+    edit do
+      # field  :nome
+      # field  :email
+      # field  :password_digest
+      exclude_fields :reset_password_sent_at, :remember_created_at
+    end 
   end
 
   config.model Galeria do
@@ -80,10 +84,10 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  config.authenticate_with do
+    warden.authenticate! scope: :usuario
+  end
+  config.current_user_method(&:current_usuario)
 
   ## == Cancan ==
   # config.authorize_with :cancan

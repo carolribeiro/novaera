@@ -7,5 +7,5 @@ class Usuario < ApplicationRecord
     has_many :galerias
     enum status: [:ativo, :inativo]
     enum tipo: [:admin, :monitor, :voluntario]
-    validates :nome, :status, presence: true
+    validates :nome, :status, :password, :password_confirmation, presence: true
 end
