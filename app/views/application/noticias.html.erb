@@ -1,0 +1,28 @@
+	<section id="blog">
+		<div class="container">
+			<div class="section_title_wrap">
+				<h1 class="section_title">
+					Notícias
+				</h1>
+			</div>
+			<div class="row">
+				<% @noticias.each do |noticia| %>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow slideInLeft" data-wow-duration="500">
+					<div class="row">
+						<div class="single_blog_post col-lg-12 col-md-12 col-sm-12">
+							<div class="image-wrap">
+								<%= image_tag(noticia.foto.to_s, class:"image") %>
+								<div class="overlay"></div>
+							</div>
+							<label><%= noticia.created_at.strftime("%d/%m/%Y") %></label>
+							<h2><%= noticia.titulo %></h2>
+							<p><%= noticia.texto %></p>
+							<%= link_to "Leia mais", noticias_path, class:"readmore" %>
+						</div>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</section> 
+	

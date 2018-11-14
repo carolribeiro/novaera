@@ -1,0 +1,43 @@
+<!-- header -->
+<header id="header">
+	<div class="container">
+		<div class="row">
+			<!-- #logo -->
+			<div id="logo" class="col-lg-12">
+				<a>
+					<%= link_to image_tag("logo.png", alt: "Logo do Projeto Nova Era"), root_path %>
+				</a>
+			</div> 
+			<!-- /#logo -->
+			
+			<button class="nav-collapser">
+				<i class="fa fa-bars"></i>
+			</button>
+
+			<!-- #main_navigation -->
+			<nav id="main_navigation" class="col-lg-12 main_navigation">
+				<ul>
+					<li class="scroll <%= active_class(root_path) %>"><%= link_to "Home", root_path %></a></li>
+					<li class="scroll <%= active_class(sobre_path) %>"><%= link_to "Sobre", sobre_path %></li>
+					<li class="scroll <%= active_class(cursos_path) %>"><a href="#blog">Cursos <b class="caret"></b></a>
+						<ul class="dropdown">
+							<li><%= link_to "Informática", cursos_informatica_path %></li>
+							<li><%= link_to "Espanhol", cursos_espanhol_path %></li>
+						</ul>
+					</li>
+					<li class="scroll <%= active_class(noticias_path) %>"><%= link_to "Notícias", noticias_path %></li></li>
+					<li class="scroll <%= active_class(galeria_path) %>"><%= link_to "Galeria", galeria_path %></li></li>
+					<li class="scroll <%= active_class(contato_path) %>"><%= link_to "Contato", contato_new_path %></li></li>
+					<li class="scroll"><a href="#blog">Login <b class="caret"></b></a>
+						<ul class="dropdown">
+							<li><a href="blog.html">Blog Page</a></li>
+							<li><a href="single-post.html">Single Post</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav> 
+			<!-- /#main_navigation -->
+		</div>
+	</div>
+</header> 
+<!-- /header -->

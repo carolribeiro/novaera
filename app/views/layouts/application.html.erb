@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="pt">
+<!--<![endif]-->
+  <head>
+    <title>Projeto Nova Era - Melhor Idade </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'prettyPhoto', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery.prettyPhoto', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'wow.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'custom', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'custom-home', 'data-turbolinks-track': 'reload' %>
+    <!--<link rel="shortcut icon" type="image/ico" href="assets/images/header/favicon.ico" />-->
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>  
+    <%= yield %>
+    <%= render 'layouts/footer' %>  
+  </body>
+</html>

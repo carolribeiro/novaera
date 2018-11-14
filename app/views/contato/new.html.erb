@@ -1,0 +1,61 @@
+<!-- #contato -->
+	<section id="rsvp">
+		<div class="overlay">
+			<div class="container">
+				<div class="row">
+					<h1>Contato</h1>
+					<div class="rsvp_wrap">
+						<h2></h2>
+					    <%= form_for @contato, url: contato_create_path, class:"contact-form" do |f| %>
+						  <p class="text-success"><%= notice%></p>
+						  <%= @contato.errors.full_messages.join(', ') %>
+						  <%= f.text_field :name, :required => true , placeholder: 'Nome', class:"name" %>
+						  <%= f.email_field :email, :required => true, placeholder: 'Email', class:"email" %>
+						  <%= f.text_area :body, :required => true, placeholder: 'Mensagem' %>
+						  <%= f.submit 'Enviar' %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+<!-- /#contato -->
+
+<!-- #our_location -->
+	<section id="our_location">
+		<div class="container">
+
+			<!-- .section_title_wrap -->
+			<div class="section_title_wrap">
+				<h1 class="section_title">
+					Localização
+				</h1>
+			</div> 
+			<!-- /.section_title_wrap -->
+
+			<div class="row">
+				<div class="single_location col-lg-3 col-sm-3">
+                    <i class="fa fa-map-marker"></i>
+					<h2>Endereço</h2>
+					<p> Fatec Rubens Lara <br>Av. Bartolomeu de Gusmão, 110 - Aparecida, Santos - SP, 11045-908</p>
+				</div>
+				<div class="single_location col-lg-3 col-sm-3">
+					<i class="fa fa-phone"></i>
+					<h2>Telefone</h2>
+					<p>(13) 3227-4834</p>
+				</div>
+				<div class="single_location col-lg-3 col-sm-3">
+					<i class="fa fa-envelope"></i>
+					<h2>Email</h2>
+					<p>novaerafatec@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</section> 
+	<!-- /#our_location -->
+
+	<!-- #gmap -->
+	<div id="gmap">
+		<iframe frameborder="0" width="100%" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhxD_ElACzpQRHVfst2S4SGI&amp;key=AIzaSyB6u6LQ8WK7ijXnxirwMc_vO2bj5USDKtA" allowfullscreen="" height="100%"></iframe>
+	</div> 
+	<!-- /#gmap -->

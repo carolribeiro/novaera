@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aluno: one
+  usuario: one
+
+two:
+  aluno: two
+  usuario: two

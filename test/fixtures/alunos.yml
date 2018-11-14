@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  rg: MyString
+  cpf: MyString
+  dtnasc: 2018-11-14
+  telefone: MyString
+  celular: MyString
+  sexo: 1
+  referenciaaluno: one
+  endereco: one
+
+two:
+  nome: MyString
+  rg: MyString
+  cpf: MyString
+  dtnasc: 2018-11-14
+  telefone: MyString
+  celular: MyString
+  sexo: 1
+  referenciaaluno: two
+  endereco: two
