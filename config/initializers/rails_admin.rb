@@ -1,6 +1,81 @@
 RailsAdmin.config do |config|
   
   config.main_app_name = ["Nova Era - Painel Administrativo", ""]
+  
+  
+  config.model Aluno do
+    navigation_icon 'fa fa-user-graduate'
+  end
+  
+  config.model Curso do
+    navigation_icon 'fa fa-certificate'
+  end
+  
+  config.model Usuario do
+    label "Usuário" 
+    navigation_icon 'fa fa-user'
+    # configure :password_digest do
+    #   label "Senha"
+    # end
+    # list do
+    #   exclude_fields :id, :password_digest, :created_at, :updated_at
+    # end
+    # show do
+    #   exclude_fields :id, :password_digest
+    # end  
+    # edit do
+    #   field  :nome
+    #   field  :email
+    #   field  :password_digest
+    # end 
+  end
+
+  config.model Galeria do
+    navigation_icon 'fa fa-camera'
+  end
+
+  config.model Noticia do
+    label "Notícia" 
+    navigation_icon 'fa fa-comment'
+    configure :titulo do
+      label "Título"
+    end
+    configure :created_at do
+      label "Criado em"
+    end
+    configure :updated_at do
+      label "Atualizado em"
+    end
+    configure :usuario do
+      label "Usuário"
+    end
+    # create do
+    #   exclude_fields :created_at, :updated_at
+    # end  
+    # edit do
+    #   exclude_fields :created_at, :updated_at
+    # end  
+    # list do
+    #   exclude_fields :id
+    #   fields :created_at, :updated_at do
+    #     strftime_format '%d/%m/%Y'
+    #   end
+    # end
+    # show do
+    #   fields :titulo, :texto, :photo
+    #   fields :created_at, :updated_at do
+    #     strftime_format '%d/%m/%Y'
+    #   end
+    #   field :usuario do
+    #       searchable :nome
+    #   end
+    # end
+ end
+
+  config.model Turma do
+    navigation_icon 'fa fa-users'
+  end
+
 
   ### Popular gems integration
 
