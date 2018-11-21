@@ -1,16 +1,19 @@
-<h2>Forgot your password?</h2>
+ <section id="rsvp">
+		<div class="overlay">
+			<div class="container">
+				<div class="row">
+					<h1>Esqueceu sua senha?</h1>
+					<div class="rsvp_wrap">
+					  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+					    <%= devise_error_messages! %>
+						  <%= f.email_field :email, :required => true, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+				
+						  <%= f.submit 'Enviar' %>
+						  
+						<% end %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+					</div>
+				</div>
+			</div>
+		</div>
+  </section> 
