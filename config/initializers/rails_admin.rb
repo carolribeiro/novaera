@@ -20,7 +20,6 @@ RailsAdmin.config do |config|
     configure :endereco do
       label "Endereço"
     end
-    
     create do
       fields :nome, :rg, :cpf, :telefone, :celular, :sexo, :status
       fields :dtnasc do
@@ -55,9 +54,11 @@ RailsAdmin.config do |config|
     
   end
   
-  def custom_label_method_aluno
-    "#{self.nome}"
-  end
+  Aluno.class_eval do
+    def custom_label_method_aluno
+      "#{self.nome}"
+    end
+  end  
   
   config.model Curso do
     navigation_icon 'fa fa-certificate'
@@ -77,12 +78,14 @@ RailsAdmin.config do |config|
       :custom_label_method_curso
     end
   end
-  
-  def custom_label_method_curso
-    "#{self.nome}"
+  Curso.class_eval do
+    def custom_label_method_curso
+      "#{self.nome}"
+    end
   end
   
   config.model Endereco do
+    visible false
     label "Endereço" 
     configure :cep do
       label "CEP"
@@ -93,13 +96,17 @@ RailsAdmin.config do |config|
     create do 
        exclude_fields :referencia_alunos, :alunos
     end
+    edit do
+      exclude_fields :referencia_alunos, :alunos
+    end  
     object_label_method do
       :custom_label_method_endereco
     end
   end  
-  
-  def custom_label_method_endereco
-    "#{self.logradouro}"
+  Endereco.class_eval do
+    def custom_label_method_endereco
+      "#{self.logradouro}"
+    end
   end
   
   config.model Usuario do
@@ -127,24 +134,32 @@ RailsAdmin.config do |config|
       :custom_label_method_usuario
     end
   end
-  
-  def custom_label_method_usuario
-    "#{self.nome}"
+  Usuario.class_eval do
+    def custom_label_method_usuario
+      "#{self.nome}"
+    end
   end
-
+  
   config.model ReferenciaAluno do
+    visible false
+    configure :endereco do
+      label "Endereço"
+    end
     create do 
        exclude_fields :alunos
     end
+    edit do
+      exclude_fields :alunos
+    end  
     object_label_method do
       :custom_label_method_referencia
     end
   end  
-  
-  def custom_label_method_referencia
-    "#{self.nome}"
+  ReferenciaAluno.class_eval do
+    def custom_label_method_referencia
+      "#{self.nome}"
+    end
   end
-
 
   config.model Galeria do
     navigation_icon 'fa fa-camera'
@@ -234,9 +249,6 @@ RailsAdmin.config do |config|
       fields :created_at, :updated_at do
         strftime_format '%d/%m/%Y'
       end
-      field :usuario do
-          searchable :nome
-      end
     end
  end
 
@@ -249,11 +261,11 @@ RailsAdmin.config do |config|
       :custom_label_method_turma
     end
   end
-  
-  def custom_label_method_turma
-    "#{self.nome}"
+  Turma.class_eval do
+    def custom_label_method_turma
+      "#{self.nome}"
+    end
   end
-
 
   ### Popular gems integration
 

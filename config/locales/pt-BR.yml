@@ -6,13 +6,24 @@ pt-BR:
         other: "%{count} dias"
   activerecord:
     models:
-      client:
-        one: Usuario
-        other: Usuarios
-        one: Turma
-        other: Turmas
+      usuario:
+        one: Usuário
+        other: Usuários
+      aluno:
         one: Aluno
-        other: Alunos
+        other: Alunos  
+      curso:
+        one: Curso
+        other: Cursos  
+      galeria:
+        one: Galeria
+        other: Galerias  
+      noticia:
+        one: Notícia
+        other: Notícias  
+      turma:
+        one: Turma
+        other: Turmas  
     attributes:
       client:
         name: "Nome"

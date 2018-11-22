@@ -9,9 +9,9 @@ class CreateAlunos < ActiveRecord::Migration[5.2]
       t.string :celular
       t.integer :sexo
       t.integer :status
-      t.references :referencia_aluno, foreign_key: true
       t.references :endereco, foreign_key: true
-
+      t.references :referencia_aluno, foreign_key: true
+            
       t.timestamps
     end
   end

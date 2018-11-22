@@ -6,6 +6,12 @@ GIT
       rails (>= 4.0, < 6)
 
 GIT
+  remote: https://github.com/mshibuya/remotipart.git
+  revision: e08ea9a3aa8db9a8b2b97b6c9e7b078ed08915f2
+  specs:
+    remotipart (1.4.2)
+
+GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 44321b1f6eb1183464837cfd701908fbe98567d2
   specs:
@@ -213,7 +219,6 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     regexp_parser (1.2.0)
-    remotipart (1.4.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -292,6 +297,7 @@ DEPENDENCIES
   rails (~> 5.2.1)
   rails_admin!
   rails_admin_rollincode!
+  remotipart!
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

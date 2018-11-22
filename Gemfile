@@ -31,7 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', git: 'https://github.com/carolribeiro/railsadmin.git'
 gem "devise"
