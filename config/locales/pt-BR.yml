@@ -43,6 +43,22 @@ pt-BR:
       usuario:
         password: "Senha"
         password_confirmation: "Confirmação de senha"
+    attributes:
+      noticia:
+        titulo: "Título"
+        fotografo: "Fotográfo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        usuario: "Usuário"
+    attributes:
+      galeria:
+        fotografo: "Fotográfo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        usuario: "Usuário"    
+    attributes:
+      curso:
+        descricao: "Descrição"
     actions:  
       noticia:
         new:

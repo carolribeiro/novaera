@@ -4,7 +4,7 @@ RailsAdmin.config do |config|
   
   
   config.model Aluno do
-    navigation_icon 'fa fa-user-graduate'
+    navigation_icon 'fas fa-user-graduate'
     configure :rg do
       label "RG"
     end
@@ -60,9 +60,6 @@ RailsAdmin.config do |config|
   
   config.model Curso do
     navigation_icon 'fa fa-certificate'
-    configure :descricao do
-      label "Descrição" 
-    end
     create do 
        exclude_fields :turmas
     end
@@ -154,33 +151,21 @@ RailsAdmin.config do |config|
 
   config.model Galeria do
     navigation_icon 'fa fa-camera'
-    configure :fotografo do
-      label "Fotográfo"
-    end
-    configure :created_at do
-      label "Criado em"
-    end
-    configure :updated_at do
-      label "Atualizado em"
-    end
-    configure :usuario do
-      label "Usuário"
-    end
     list do
       exclude_fields :id
       fields :created_at, :updated_at do
         strftime_format '%d/%m/%Y'
       end
     end
-    edit do
-      exclude_fields :created_at, :updated_at
-      field :usuario, :hidden do
-        visible false
-        default_value do
-          bindings[:view]._current_user.id
-        end
-      end
-    end  
+    # edit do
+    #   exclude_fields :created_at, :updated_at
+    #   field :usuario, :hidden do
+    #     visible false
+    #     default_value do
+    #       bindings[:view]._current_user.id
+    #     end
+    #   end
+    # end  
   end
 
   config.model Matricula do
@@ -189,23 +174,7 @@ RailsAdmin.config do |config|
   end  
 
   config.model Noticia do
-    label "Notícia" 
     navigation_icon 'fa fa-comment'
-    configure :titulo do
-      label "Título"
-    end
-    configure :fotografo do
-      label "Fotográfo"
-    end
-    configure :created_at do
-      label "Criado em"
-    end
-    configure :updated_at do
-      label "Atualizado em"
-    end
-    configure :usuario do
-      label "Usuário"
-    end
     create do
       exclude_fields :created_at, :updated_at
       # configure :usuario do
@@ -219,7 +188,6 @@ RailsAdmin.config do |config|
       #   end
       # end
     end
-    
     edit do
       exclude_fields :created_at, :updated_at
       field :usuario, :hidden do

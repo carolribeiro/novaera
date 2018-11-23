@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     def index
        @noticias = Noticia.last(3).reverse # SELECT * FROM Noticia ORDER BY created_at DESC LIMIT 3;
-       #@noticias = Noticia.joins(:usuario)
+       @galerias = Galeria.last(3).reverse # SELECT * FROM Galeria ORDER BY created_at DESC LIMIT 3;
     end
     
     def sobre
@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
     end
 
     def galeria
+        @galerias = Galeria.all.order("created_at DESC") # SELECT * FROM Galeria ORDER BY created_at DESC
     end
 
     def contato

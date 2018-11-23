@@ -1,0 +1,33 @@
+<!-- #author -->
+	<section id="author">
+		<div class="container">
+			<div class="row wow fadeIn" data-animation-delay="1000" data-animation-duration="1000">
+				<img src="images/single-post/blog-author.jpg" alt="">
+				<h2>Rashed Kabir</h2>
+				<label>Author</label>
+			</div>
+		</div>
+	</section> <!-- /#author -->
+ 
+ <!--por Últimos posts-->
+
+	<!-- #blog_content -->
+	<section id="blog_content">
+		<div class="container">
+			<div class="row">
+				<div class="content_top wow slideInLeft">
+					<label class="post_meta">Posted by <a href="#">Jhone</a> em <%= @noticias.created_at.strftime("%d/%m/%Y") %></label>
+					<h2 class="content_title"><%= @noticias.titulo %></h2> 
+					<h3><%= @noticias.subtitulo %></h3> 
+					<%= image_tag(@noticias.foto.to_s, alt: @noticias.titulo, class:"image") %>
+					<p>Foto tirada por: <%= @noticias.fotografo%></p>
+					<p><%= @noticias.texto %></p>
+				    
+				</div>
+
+			</div>
+		</div>
+	</section> <!-- /#blog_content -->
+	
+	
+	

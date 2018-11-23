@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_215202) do
+ActiveRecord::Schema.define(version: 2018_11_23_223451) do
 
   create_table "alunos", force: :cascade do |t|
     t.string "nome"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2018_11_21_215202) do
     t.integer "usuario_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "subtitulo"
     t.index ["usuario_id"], name: "index_noticia_on_usuario_id"
   end
 

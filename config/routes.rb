@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'cursos/informatica'
   get 'cursos/espanhol'
   get "/noticias" => "application#noticias"
+  get 'noticias/show/:id' => "noticias#show", as: "noticias_show"
   get "/galeria" => "application#galeria"
   get "/contato" => "application#contato"
   get 'contato/new'

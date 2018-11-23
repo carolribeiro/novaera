@@ -1213,10 +1213,10 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 #blog .single_blog_post a.readmore:before {
   border-radius: 5px;
   background: #fff;
-  border: 1px solid #FF6D6D;
+  border: 1px solid #a24d86;
 }
 #blog .single_blog_post a.readmore:hover, #blog .single_blog_post a.readmore:focus, #blog .single_blog_post a.readmore:active {
-  color: #FF6D6D;
+  color: #a24d86;
 }
 #blog .single_blog_post .image-wrap {
 	position: relative;
@@ -1481,11 +1481,11 @@ footer {
  # 22.  Blog Details Styles
  =========================*/
 
-.single #author {
-	background: #FF6D6D;
+#author {
+	background: #a24d86;
 	text-align: center;
 }
-.single #author img {
+#author img {
 	margin: 0 auto;
 	margin-top: 50px;
 	width: 120px;
@@ -1493,7 +1493,7 @@ footer {
 	border-radius: 50%;
 	border: 7px solid #fff;
 }
-.single #author h2 {
+#author h2 {
 	font-size: 24px;
 	line-height: 30px;
 	font-style: italic;
@@ -1502,7 +1502,7 @@ footer {
 	margin-top: 25px;
 	margin-bottom: 5px;
 }
-.single #author label {
+#author label {
 	margin-bottom: 50px;
 	font-weight: bold;
 	color: #fff;
@@ -1510,7 +1510,7 @@ footer {
 	line-height: 30px;
 	text-transform: uppercase;
 }
-.single #author label:before {
+#author label:before {
 	content: " ";
 	width: 15px;
 	border-top: 3px solid #fff;
@@ -1519,7 +1519,7 @@ footer {
 	bottom: 3px;
 	right: 5px;
 }
-.single #author label:after {
+#author label:after {
 	content: " ";
 	width: 15px;
 	border-top: 3px solid #fff;
@@ -1533,21 +1533,21 @@ footer {
  # 23.  Single blog_content Styles
  ===================================*/
 
-.single #blog_content {
+#blog_content {
 	background: #F9F7F1;
 	padding-top: 60px;
 	padding-bottom: 165px;
 }
-.single #blog_content .content_top {
+#blog_content .content_top {
 	margin-bottom: 25px;
 	padding: 25px;
 	background: #fff;
 	text-align: center;
 }
-.single #blog_content .content_top img {
-	width: 100%;
-}
-.single #blog_content .content_top .content_title {
+/*#blog_content .content_top img {*/
+/*	width: 100%;*/
+/*}*/
+#blog_content .content_top .content_title {
 	font-size: 30px;
 	line-height: 35px;
 	color: #383838;
@@ -1556,32 +1556,32 @@ footer {
 	margin-bottom: 40px;
 	text-align: center;
 }
-.single #blog_content .content_top p {
+#blog_content .content_top p {
 	color: #939393;
 	font-size: 13px;
 	line-height: 24px;
 	margin-bottom: 35px;
 }
-.single #blog_content .content_top p.highlight {
+#blog_content .content_top p.highlight {
 	font-size: 18px;
 	color: #262626;
 	font-style: italic;
 }
-.single #blog_content .content_top label.post_meta {
+#blog_content .content_top label.post_meta {
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: normal;
 	color: #262626;
 }
-.single #blog_content .content_top label.post_meta a {
+#blog_content .content_top label.post_meta a {
 	color: #FF6D6D;
 }
-.single #blog_content .comment_section {
+#blog_content .comment_section {
 	padding: 25px 125px;
 	background: #fff;
 	margin-bottom: 25px;
 }
-.single #blog_content .comment_section .comment_title {
+#blog_content .comment_section .comment_title {
 	font-size: 30px;
 	line-height: 35px;
 	color: #383838;
