@@ -2,8 +2,23 @@ pt-BR:
   datetime:
     distance_in_words:
       x_days:
-        one: "1 dias"
+        one: "1 dia"
         other: "%{count} dias"
+      about_x_hours:
+        one: '1 hora'
+        other: '%{count} horas'
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"  
+      x_months:
+        one: "1 mês"
+        other: "%{count} meses"
+      x_years:
+        one: "1 ano"
+        other: "%{count} anos"
+      x_seconds:
+        one: "1 segundo"
+        other: "%{count} segundos"  
   activerecord:
     models:
       usuario:
@@ -25,9 +40,13 @@ pt-BR:
         one: Turma
         other: Turmas  
     attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
+      usuario:
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+    actions:  
+      noticia:
+        new:
+          title: "Nova %{model_label}"
   views:
   admin:
     home:
@@ -162,3 +181,4 @@ pt-BR:
       default: '%d/%m/%Y'
       long:  '%d %B %Y'
       short:  '%d %b'    
+  

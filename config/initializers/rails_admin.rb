@@ -51,9 +51,7 @@ RailsAdmin.config do |config|
     object_label_method do
       :custom_label_method_aluno
     end
-    
   end
-  
   Aluno.class_eval do
     def custom_label_method_aluno
       "#{self.nome}"
@@ -63,7 +61,7 @@ RailsAdmin.config do |config|
   config.model Curso do
     navigation_icon 'fa fa-certificate'
     configure :descricao do
-      label "Descrição" #trocar campo da descriçao por text
+      label "Descrição" 
     end
     create do 
        exclude_fields :turmas
@@ -110,14 +108,7 @@ RailsAdmin.config do |config|
   end
   
   config.model Usuario do
-    label "Usuário" 
     navigation_icon 'fa fa-user'
-    configure :password do
-      label "Senha"
-    end
-    configure :password_confirmation do
-      label "Confirmação de senha"
-    end
     configure :noticias do
       label "Notícias"
     end
