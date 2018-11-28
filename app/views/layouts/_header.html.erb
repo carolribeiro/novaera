@@ -28,7 +28,16 @@
 					<li class="scroll <%= active_class(noticias_path) %>"><%= link_to "Notícias", noticias_path %></li></li>
 					<li class="scroll <%= active_class(galeria_path) %>"><%= link_to "Galeria", galeria_path %></li></li>
 					<li class="scroll <%= active_class(contato_path) %>"><%= link_to "Contato", contato_new_path %></li></li>
-					<li class="scroll <%= active_class(new_usuario_session_path) %>"><%= link_to "Login", new_usuario_session_path %></li>
+					<% if usuario_signed_in? %>
+						<li class="scroll"><a href="#blog"><%= current_usuario.email %> <b class="caret"></b></a>
+							<ul class="dropdown">
+								<li><%= link_to "Painel", rails_admin.dashboard_path %></li>
+								<li><%= link_to "Sair", destroy_usuario_session_path, :method => :delete %></li>
+							</ul>
+						</li>
+					<% else %>
+						<li class="scroll <%= active_class(new_usuario_session_path) %>"><%= link_to "Login", new_usuario_session_path %></li>
+					<% end %>	
 				</ul>
 			</nav> 
 			<!-- /#main_navigation -->
