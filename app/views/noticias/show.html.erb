@@ -1,33 +1,60 @@
-<!-- #author -->
-	<section id="author">
-		<div class="container">
-			<div class="row wow fadeIn" data-animation-delay="1000" data-animation-duration="1000">
-				<img src="images/single-post/blog-author.jpg" alt="">
-				<h2>Rashed Kabir</h2>
-				<label>Author</label>
-			</div>
-		</div>
-	</section> <!-- /#author -->
- 
- <!--por Últimos posts-->
+	<!--<section id="author">-->
+	<!--	<div class="container">-->
+	<!--		<div class="row">-->
+	<!--			<h2 class="section_title">Notícias</h2>-->
+	<!--		</div>-->
+	<!--	</div>-->
+	<!--</section> -->
+	
 
-	<!-- #blog_content -->
+
 	<section id="blog_content">
 		<div class="container">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+			    <li class="breadcrumb-item"><%= link_to "Notícias", noticias_path %></li>
+			    <li class="breadcrumb-item active" aria-current="page"><%= @noticias.titulo %></li>
+			  </ol>
+			</nav>
 			<div class="row">
-				<div class="content_top wow slideInLeft">
+				<div class="col-lg-8 col-md-8 col-sm-8 content_top wow slideInLeft">
 					<label class="post_meta">Posted by <a href="#">Jhone</a> em <%= @noticias.created_at.strftime("%d/%m/%Y") %></label>
-					<h2 class="content_title"><%= @noticias.titulo %></h2> 
-					<h3><%= @noticias.subtitulo %></h3> 
+					<h3 class="content_title"><%= @noticias.titulo %></h3> 
+					<h4><%= @noticias.subtitulo %></h4> 
 					<%= image_tag(@noticias.foto.to_s, alt: @noticias.titulo, class:"image") %>
 					<p>Foto tirada por: <%= @noticias.fotografo%></p>
 					<p><%= @noticias.texto %></p>
-				    
 				</div>
-
+				
+				<aside class="">
+					<h3 class="sidebarPost-title">Últimas notícias</h3>
+					<% @noticia.each do |noticia| %>
+						<div class="col-lg-4 col-md-4 col-sm-4">
+							<div class="sidebarPost">
+								<%= link_to noticias_show_path(id: noticia.id), class:"sidebarPost-link" do %>
+						            <div class="sidebarPost-date">
+						            	<span class="sidebarPost-date-day"> 
+						            		<%= noticia.created_at.strftime("%d") %>
+						            	</span>
+						            	<span class="sidebarPost-date-month">
+						            		<%= noticia.created_at.strftime("%m") %>
+						            	</span>
+						            </div>
+						            <h4 class="sidebarPost-title"> 
+						            	<%= noticia.titulo %> 
+						            </h4>
+						        <% end %>
+				            </div>
+				       </div>     
+					<% end %>
+				</div>	
 			</div>
 		</div>
-	</section> <!-- /#blog_content -->
+		
+	</section> 
+	
+	
 	
 	
 	

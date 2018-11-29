@@ -1,4 +1,3 @@
-	<!-- #slider -->
 	<section id="slider">
 		<div class="overlay">
 			<div class="container">
@@ -6,16 +5,13 @@
 					<div class="col-lg-12">
 						<h1 class="wow fadeIn"  data-wow-duration="2000">Cursos gratuitos e de <br>qualidade para a melhor idade</h1>
 						<ul class="time_counter clearfix" id="countdowncontainer">
-							<!-- dynamically count down wil added by js -->
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section> 
-	<!-- /#slider -->
-	
-	<!-- #qoute -->
+
 	<section id="qoute">
 		<div class="overlay">
 			<div class="container">
@@ -28,21 +24,16 @@
 			</div>
 		</div>
 	</section> 
-	<!-- /#qoute -->
-	
-	<!-- #groom_bride -->
+
 	<section id="groom_bride">
 		<div class="container">
-			<!-- .section_title_wrap -->
 			<div class="section_title_wrap">
 				<h1 class="section_title">
 					Cursos
 				</h1>
-			</div> <!-- /.section_title_wrap -->
+			</div> 
 
 			<div class="row">
-
-				<!-- .single_groom -->
 				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 single_groom col-lg-push-1 col-md-push-1 wow slideInLeft" data-animation-duration="3s" data-animation-delay="1s">
 					<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
 					<div class="info-box">
@@ -50,9 +41,8 @@
 						<p>Indicado para pessoas com mais de 40 anos de idade, o curso permite ao participante o primeiro contato com o computador, fornecendo informações básicas de informática e conhecimentos para a navegação na internet, explorando os principais recursos de pesquisa e entretenimento. </p>
 						<button>Saiba mais</button>
 					</div>
-				</div> <!-- /.single_groom -->
+				</div> 
 
-				<!-- .single_bride -->
 				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 single_bride col-lg-offset-1 col-md-offset-1 wow slideInRight"  data-animation-duration="3s" data-animation-delay="2s">
 					<%= image_tag("acucena.jpg", alt: "professora Açucena") %>
 					<div class="info-box">
@@ -60,31 +50,27 @@
 						<p>Indicado para pessoas com mais de 40 anos de idade, o curso permite ao participante o primeiro contato com o computador, fornecendo informações básicas de informática e conhecimentos para a navegação na internet, explorando os principais recursos de pesquisa e entretenimento. </p>
 						<button>Saiba mais</button>
 					</div>
-				</div> <!-- /.single_bride -->
+				</div> 
 
 			</div>
 		</div>
-	</section> <!-- /#groom_bride -->
+	</section> 
 	
-	<!-- #blog -->
 	<section id="blog">
 		<div class="container">
-
-			<!-- .section_title_wrap -->
 			<div class="section_title_wrap">
 				<h1 class="section_title">
 					Notícias
 				</h1>
 			</div>
-			<!-- /.section_title_wrap -->
-
+		
 			<div class="row">
 				<% @noticias.each do |noticia| %>
 				<div class="col-lg-4 col-md-4 col-sm-4 wow slideInLeft" data-wow-duration="500">
 					<div class="row">
 						<div class="single_blog_post col-lg-12 col-md-12 col-sm-12">
 							<div class="image-wrap">
-								<%= image_tag(noticia.foto.to_s, class:"image") %>
+								<%= image_tag(noticia.foto.to_s, alt: noticia.titulo, class:"image") %>
 								<div class="overlay"></div>
 							</div>
 							<label><%= noticia.created_at.strftime("%d/%m/%Y") %></label>
@@ -98,47 +84,27 @@
 			</div>
 		</div>
 	</section> 
-	<!-- /#blog -->
 
-	<!-- #galeria -->
 	<section id="event_parties">
 		<div class="container">
-
-			<!-- .section_title_wrap -->
 			<div class="section_title_wrap">
 				<h1 class="section_title">
 					Galeria
 				</h1>
 			</div> 
-			<!-- /.section_title_wrap -->
-
 			<div class="row">
-				<div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 wow slideInLeft">
+				<% @galerias.each do |galeria| %>
+				<div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 slideInLeft">
 					<div class="image-wrap">
-						<%= image_tag("leticia.jpg", alt: "Letícia") %>
-						<div class="overlay"></div>
+						<%= link_to image_tag(galeria.foto.to_s, alt: galeria.legenda), galeria_path %>
+						
 					</div>
-					
 				</div>
-				<div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 wow slideInTop">
-					<div class="image-wrap">
-						<%= image_tag("leticia.jpg", alt: "Letícia") %>
-						<div class="overlay"></div>
-					</div>
-					
-				</div>
-			    <div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 wow slideInTop">
-					<div class="image-wrap">
-						<%= image_tag("leticia.jpg", alt: "Letícia") %>
-						<div class="overlay"></div>
-					</div>
-				
-				</div>
-
+				<% end %>
 			</div>
 		</div>
 	</section> 
-	<!-- /#galeria -->
+
 	
 	
 

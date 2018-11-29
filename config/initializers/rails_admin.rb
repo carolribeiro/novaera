@@ -106,6 +106,12 @@ RailsAdmin.config do |config|
   
   config.model Usuario do
     navigation_icon 'fa fa-user'
+    configure :password do
+      label "Senha"
+    end
+    configure :password_confirmation do
+      label "Confirmação de senha"
+    end
     configure :noticias do
       label "Notícias"
     end
@@ -151,6 +157,24 @@ RailsAdmin.config do |config|
 
   config.model Galeria do
     navigation_icon 'fa fa-camera'
+    configure :created_at do
+      label "Criado em"
+    end
+    configure :updated_at do
+      label "Atualizado em"
+    end
+    configure :fotografo do
+      label "Fotográfo"
+    end
+    configure :usuario do
+      label "Usuário"
+    end
+    create do
+      exclude_fields :created_at, :updated_at
+    end
+    edit do
+      exclude_fields :created_at, :updated_at
+    end
     list do
       exclude_fields :id
       fields :created_at, :updated_at do
@@ -175,6 +199,27 @@ RailsAdmin.config do |config|
 
   config.model Noticia do
     navigation_icon 'fa fa-comment'
+    configure :titulo do
+      label "Título"
+    end
+    configure :subtitulo do
+      label "Subtítulo"
+    end
+    configure :fotografo do
+      label "Fotográfo"
+    end
+    configure :updated_at do
+      label "Atualizado em"
+    end
+    configure :created_at do
+      label "Criado em"
+    end
+    configure :updated_at do
+      label "Atualizado em"
+    end
+    configure :usuario do
+      label "Usuário"
+    end
     create do
       exclude_fields :created_at, :updated_at
       # configure :usuario do
@@ -203,13 +248,13 @@ RailsAdmin.config do |config|
         strftime_format '%d/%m/%Y'
       end
     end
-    show do
-      fields :titulo, :texto, :foto
-      fields :created_at, :updated_at do
-        strftime_format '%d/%m/%Y'
-      end
-    end
- end
+#     show do
+#       fields :titulo, :subtitulo, :texto, :foto
+#       fields :created_at, :updated_at do
+#         strftime_format '%d/%m/%Y'
+#       end
+#     end
+  end
 
   config.model Turma do
     navigation_icon 'fa fa-users'
@@ -220,6 +265,7 @@ RailsAdmin.config do |config|
       :custom_label_method_turma
     end
   end
+  
   Turma.class_eval do
     def custom_label_method_turma
       "#{self.nome}"

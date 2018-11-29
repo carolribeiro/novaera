@@ -59,10 +59,6 @@ pt-BR:
     attributes:
       curso:
         descricao: "Descrição"
-    actions:  
-      noticia:
-        new:
-          title: "Nova %{model_label}"
   views:
   admin:
     home:
