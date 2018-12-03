@@ -19,16 +19,22 @@
 			</nav>
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-sm-8 content_top wow slideInLeft">
-					<label class="post_meta">Posted by <a href="#">Jhone</a> em <%= @noticias.created_at.strftime("%d/%m/%Y") %></label>
-					<h3 class="content_title"><%= @noticias.titulo %></h3> 
+					<h3 class=""><%= @noticias.titulo %></h3> 
 					<h4><%= @noticias.subtitulo %></h4> 
-					<%= image_tag(@noticias.foto.to_s, alt: @noticias.titulo, class:"image") %>
-					<p>Foto tirada por: <%= @noticias.fotografo%></p>
+					<label class="post_meta">Postado por Join em <%= @noticias.created_at.strftime("%d/%m/%Y") %></label>
+					<figure class="figure">
+						<%= image_tag(@noticias.foto.to_s, alt: @noticias.titulo, class:"image") %>
+						<% if @noticias.fotografo.present? %>
+						<figcaption class="figure-caption">
+							Foto tirada por: <%= @noticias.fotografo%>
+						</figcaption>
+						<% end %>
+					</figure>
 					<p><%= @noticias.texto %></p>
 				</div>
 				
 				<aside class="">
-					<h3 class="sidebarPost-title">Últimas notícias</h3>
+					<h3 class="content_title">Últimas notícias</h3>
 					<% @noticia.each do |noticia| %>
 						<div class="col-lg-4 col-md-4 col-sm-4">
 							<div class="sidebarPost">
@@ -46,9 +52,9 @@
 						            </h4>
 						        <% end %>
 				            </div>
-				       </div>     
+				        </div>  
 					<% end %>
-				</div>	
+				</aside>	
 			</div>
 		</div>
 		

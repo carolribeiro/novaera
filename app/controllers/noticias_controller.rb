@@ -4,6 +4,8 @@ class NoticiasController < ApplicationController
     @noticia = Noticia.all.order("created_at DESC") # SELECT * FROM Noticia ORDER BY created_at DESC
     @noticias = Noticia.find(params[:id])
     #@noticias = Noticia.all :joins => :usuarios
+    @posts = Noticia.joins(:usuario)
+    
   end
   
 end

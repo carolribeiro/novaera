@@ -1,9 +1,42 @@
-<footer>
-	<div class="footer_top">
-		<%= link_to image_tag("logo.png", alt: "Logo do Projeto Nova Era"), root_path %>
-	</div> 
-	
-	
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer_top">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<%= link_to image_tag("logo-footer.png", alt: "Logo do Projeto Nova Era"), root_path %>
+					<h2 class="frl">Fatec Rubens Lara</h2>
+					<p><i class="fa fa-map-marker"></i>  Av. Bartolomeu de Gusmão, 110 - Aparecida, Santos - SP, 11045-908 </p>
+					<p><i class="fa fa-phone"></i>  (13) 3227-4834</p>
+					<p><i class="fa fa-envelope"></i>  novaerafatec@gmail.com</p>
+				</div> 
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<h2>Links Úteis</h2>
+					<ol>
+						<li><%= link_to "Home", root_path %></li>
+						<li><%= link_to "Sobre", sobre_path %></li>
+						<li><%= link_to "Notícias", noticias_path %></li>
+						<li><%= link_to "Galeria", galeria_path %></li>
+						<li><%= link_to "Contato", contato_new_path %></li>
+						<li><%= link_to "Login", new_usuario_session_path %></li>
+					</ol>
+				</div>	
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<h2>Cursos</h2>
+					<ol>
+						<li><%= link_to "Informática", cursos_informatica_path %></li>
+						<li><%= link_to "Espanhol", cursos_espanhol_path %></li>
+					</ol>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<h2>Redes Sociais</h2>
+					<ol>
+						<li><i class="fa fa-facebook-square"></i> <%= link_to "Facebook", "https://www.facebook.com/novaeramelhoridade/", :target => '_blank' %></li>
+						<li><i class="fa fa-youtube-square"></i> <%= link_to "Youtube", "https://www.youtube.com/channel/UC2gtlLWRJ1GyWrTxHCNb7IA/videos", :target => '_blank' %></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="footer_bottom">
 		<p>&copy; 2018 Desenvolvido por Fatec RL</a></p>
