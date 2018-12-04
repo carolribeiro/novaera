@@ -1,11 +1,21 @@
-<!-- #sobre -->
+<section id="author">
+	<div class="container">
+		<div class="row">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+			    <li class="breadcrumb-item active">Sobre</li>
+			  </ol>
+			</nav>
+			<h1 class="section_title">Sobre o projeto</h1>
+		</div>
+	</div>
+</section> 
+
+
 <section id="sobre">
 	<div class="container">
-		<!-- .section_title_wrap -->
 		<div class="section_title_wrap">
-			<h1 class="section_title">
-				Sobre o Projeto
-			</h1>
 			<p>
 			    No segundo semestre de 2010 o diretor professor Dr. Paulo Roberto Schroeder de Souza implantou na Fatec Baixada Santista Rubens Lara cursos voltados a terceira idade denominado como <b>Projeto Nova Era - Melhor Idade</b>, que tem como objetivo de desenvolver junto com os professores, através de aulas práticas, uma metodologia voltada a Terceira Idade.
 			</p>
@@ -33,14 +43,14 @@
                 Ao término de cada turma ocorre uma cerimônia de entrega dos certificados para todos os alunos que concluíram o curso.
 			</p>
 		</div> 
-		<!-- /.section_title_wrap -->
+		
 	</div>
 </section> 
 
-<!-- #membros-->
+
+
 	<section id="membros">
 		<div class="container">
-			<!-- .section-title -->
 			<div class="section_title_wrap">
 				<h1 class="section_title">
 					Membros do Projeto
@@ -63,48 +73,31 @@
 					<h2>Açucena Ortega Rabadán</h2>
 					<span>Professora de Espanhol</span>
 				</div>
-			</div>
-			
-
-			<div class="row close_person_bottom">
-
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="close_person_bottom_single clearfix">
-						<%= image_tag("leticia.jpg", alt: "Letícia") %>
-						<div class="details">
-							<h2>Jim Burner</h2>
-							<span>Monitor</span>
-						</div>
-					</div>
-					
-					<div class="close_person_bottom_single clearfix">
-						<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
-						<div class="details">
-							<h2>Jim Burner</h2>
-							<span>Voluntário</span>
-						</div>
-					</div>
-					
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 close_person_top">
+					<%= image_tag("leticia.jpg", alt: "Letícia") %>
+					<h2>Ayrton Andrade</h2>
+					<span>Monitor de informática</span>
+				</div>	
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 close_person_top">
+					<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
+					<h2>Gilmara Santos</h2>
+					<span>Monitora de informática</span>
 				</div>
-
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<div class="close_person_bottom_single clearfix">
-						<div class="details">
-							<h2>Jim Burner</h2>
-							<span>Monitora</span>
-						</div>
-						<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
-					</div>
-					<div class="close_person_bottom_single clearfix">
-						<div class="details">
-							<h2>Jim Burner</h2>
-							<span>Voluntária</span>
-						</div>
-						<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
-					</div>
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 close_person_top">
+					<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
+					<h2>Jim Burner</h2>
+					<span>Voluntário</span>
 				</div>
-
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 close_person_top">	
+					<%= image_tag("nadia.jpg", alt: "professora Nádia") %>
+					<h2>Jim Burner</h2>
+					<span>Voluntária</span>
+				</div>
+				
 			</div>
-
 		</div>
-	</section> <!-- /#membros -->
+	</section> 

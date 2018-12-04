@@ -786,7 +786,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 
 #sobre {
 	background: #f5f5f5;
-	/*padding-bottom: 165px;*/
+	padding-bottom: 10px;
 }
 #sobre ul li {
 	padding-bottom: 50px;
@@ -915,7 +915,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 	background: #fff;
 }
 #membros .close_person_top {
-	padding: 0 100px;
+	/*padding: 0 100px;*/
 	text-align: center;
 	padding-bottom: 60px;
 }
@@ -1003,11 +1003,12 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 }
 #membros .close_person_bottom_single span {
 	display: block;
-	font-style: italic;
+	/*font-style: italic;*/
 	color: #8270A4;
 	font-size: 13px;
 	line-height: 26px;
 	margin-bottom: 15px;
+	font-weight: bold;
 }
 
 
@@ -1454,7 +1455,8 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 .sidebarPost {
     background: #f2f2f2;
     width: 100%;
-    margin: 0 0 1.5rem
+    margin: 0 0 1.5rem;
+    
 }
 
 .sidebarPost-link {
@@ -1508,7 +1510,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 
 @media (min-width:768px) {
     .sidebarPost-date {
-        color: #999
+        color: #444
     }
 }
 
@@ -1530,10 +1532,15 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 
 .sidebarPost-title {
     -webkit-transition: all .25s;
-    color: #999;
+    color: #444;
     font-size: 12px;
     font-weight: 400;
-    transition: all .25s
+    transition: all .25s;
+    text-transform : none;
+}
+
+.sidebarPost-title:hover{
+    color: #8270A4;
 }
 
 /*==========================
@@ -1793,6 +1800,24 @@ footer a{
 /*==========================
  # 22.  Blog Details Styles
  =========================*/
+.breadcrumb a{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+    line-height: 32px;
+} 
+ 
+.breadcrumb {
+	background: none;
+	text-align: left;
+	
+}
+
+.breadcrumb .active{
+	color: #f5f5f5;
+}
+
 
 #author {
 	background: #8270A4;
@@ -1806,13 +1831,13 @@ footer a{
 	border-radius: 50%;
 	border: 7px solid #fff;
 }
-#author h2 {
-	font-size: 24px;
+#author h1 {
+	font-size: 36px;
 	line-height: 30px;
-	font-style: italic;
+	/*font-style: italic;*/
 	font-weight: normal;
 	color: #fff;
-	margin-top: 25px;
+	/*margin-top: 25px;*/
 	margin-bottom: 5px;
 }
 #author label {

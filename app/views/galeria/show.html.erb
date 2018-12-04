@@ -1,15 +1,6 @@
-	<!--<section id="author">-->
-	<!--	<div class="container">-->
-	<!--		<div class="row">-->
-	<!--			<h2 class="section_title">Notícias</h2>-->
-	<!--		</div>-->
-	<!--	</div>-->
-	<!--</section> -->
-	
-
-
-	<section id="blog_content">
-		<div class="container">
+<section id="author">
+	<div class="container">
+		<div class="row">
 			<nav aria-label="breadcrumb">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
@@ -17,10 +8,15 @@
 			    <li class="breadcrumb-item active" aria-current="page"><%= @galerias.legenda %></li>
 			  </ol>
 			</nav>
+			<h1 class="section_title">Galeria</h1>
+		</div>	
+	</div>
+</section> 
+
+	<section id="blog_content">
+		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-8 content_top wow slideInLeft">
-					
-					<label class="post_meta">Postado por Join em <%= @galerias.created_at.strftime("%d/%m/%Y") %></label>
+				<div class="col-lg-12 col-md-12 col-sm-12 content_top wow slideInLeft">
 					<figure class="figure">
 						<%= image_tag(@galerias.foto.to_s, alt: @galerias.legenda, class:"image") %>
 						<% if @galerias.fotografo.present? %>

@@ -1,16 +1,26 @@
+<section id="author">
+	<div class="container">
+		<div class="row">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+			    <li class="breadcrumb-item active">Galeria</li>
+			  </ol>
+			</nav>
+			<h1 class="section_title">Galeria</h1>
+		</div>
+	</div>
+</section> 
+
 <section id="event_parties">
 	<div class="container">
-		<div class="section_title_wrap">
-			<h1 class="section_title">
-				Galeria
-			</h1>
-		</div> 
+		<div class="section_title_wrap"></div> 
 		<div class="row">
 			<% @galerias.each do |galeria| %>
-			<div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 wow slideInLeft">
+			<div class="single_event col-lg-4 col-md-4 col-sm-4 col-xs-12 slideInLeft">
 				<div class="image-wrap">
-					<%= image_tag(galeria.foto.to_s, alt: galeria.legenda) %>
-					<div class="overlay"></div>
+					<%= link_to image_tag(galeria.foto.to_s, alt: galeria.legenda, class: "img-responsive"), galeria_show_path(id: galeria.id) %>
+			
 				</div>
 			</div>
 			<% end %>

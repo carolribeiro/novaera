@@ -4,7 +4,7 @@ RailsAdmin.config do |config|
   
   
   config.model Aluno do
-    navigation_icon 'fas fa-user-graduate'
+    navigation_icon 'fa fa-user'
     configure :rg do
       label "RG"
     end
@@ -193,6 +193,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Matricula do
+    visible false
     label "Matrícula" 
     navigation_icon 'fa fa-clipboard'
   end  
