@@ -931,6 +931,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 #membros .close_person_top:hover img {
 	box-shadow: 0 0px 1px 10px #8270A4;
 }
+
 #membros .close_person_top h2 {
 	color: #262626;
 	font-size: 14px;
@@ -1465,7 +1466,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
     display: -ms-flexbox;
     display: flex;
     padding: 1rem;
-    transition: all .25s
+    transition: all .25s;
 }
 
 .sidebarPost-link,
@@ -1510,7 +1511,8 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
 
 @media (min-width:768px) {
     .sidebarPost-date {
-        color: #444
+        color: #444;
+        line-height: 15px; 
     }
 }
 
@@ -1537,6 +1539,7 @@ button:hover:before, .single_blog_post .readmore:hover:before, button:focus:befo
     font-weight: 400;
     transition: all .25s;
     text-transform : none;
+    margin-top: 13px;
 }
 
 .sidebarPost-title:hover{
@@ -1894,18 +1897,29 @@ footer a{
 /*#blog_content .content_top img {*/
 /*	width: 100%;*/
 /*}*/
-#blog_content .content_top .content_title {
-	font-size: 30px;
-	line-height: 35px;
-	color: #383838;
-	font-weight: 600;
-	margin-top: 65px;
-	margin-bottom: 40px;
-	text-align: center;
-}
+/*#blog_content .content_top .content_title {*/
+/*	font-size: 30px;*/
+/*	line-height: 35px;*/
+/*	color: #383838;*/
+/*	font-weight: 600;*/
+/*	margin-top: 65px;*/
+/*	margin-bottom: 40px;*/
+/*	text-align: center;*/
+/*}*/
 .content_title{
 	margin-top: 26px;
 	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.content_title_h3{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.content_title_h4{
+	font-size: 15px;
 }
 
 #blog_content .content_top p {
@@ -1925,7 +1939,7 @@ footer a{
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: normal;
-	color: #262626;
+	color: #444;
 }
 #blog_content .content_top label.post_meta a {
 	color: #FF6D6D;
@@ -2067,8 +2081,6 @@ footer a{
 .single #blog_content .comment_form .form_top input:last-child {
 	margin-right: 0;
 }
-
-
 
 
 /*==========================

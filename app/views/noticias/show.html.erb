@@ -18,9 +18,9 @@
 	<section id="blog_content">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-8 content_top wow slideInLeft">
-					<h3 class=""><%= @noticias.titulo %></h3> 
-					<h4><%= @noticias.subtitulo %></h4> 
+				<div class="col-lg-8 col-md-8 col-sm-8 content_top">
+					<h3 class="content_title_h3"><%= @noticias.titulo %></h3> 
+					<h4 class="content_title_h4"><%= @noticias.subtitulo %></h4> 
 					<label class="post_meta">Postado por Join em <%= @noticias.created_at.strftime("%d/%m/%Y") %></label>
 					<figure class="figure">
 						<%= image_tag(@noticias.foto.to_s, alt: @noticias.titulo, class:"image") %>
